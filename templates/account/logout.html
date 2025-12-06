@@ -1,0 +1,13 @@
+<body>
+    <div class="container py-5">
+        <h1 class="text-center">Logout</h1>
+        <p class="text-center">Are you sure you want to logout?</p>
+        <div class="text-center">
+            <form action='' method= 'post'>
+                {% csrf_token %}
+                <button type="submit" class="btn danger">Logout</button>
+              </form>
+            <a href="/" class="btn btn-secondary">Cancel</a>
+        </div>
+    </div>
+</body>

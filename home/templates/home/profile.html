@@ -1,0 +1,23 @@
+{% extends "_base.html" %}
+<body>
+    {% block content %}
+    <h2>Profile: {{ user.username }}</h2>
+
+    <p class="card-text">Email: {{ user.email }}</p>
+    <p class="card-text">Joined: {{ user.date_joined }}</p>
+    <p class="card-text">Bio: {{ profile.bio }}</p>
+
+    <h3>Posts by {{ user.username }}</h3>
+    <ul>
+        {% for post in posts %}
+            <li>
+
+                <a href="{% url 'post_detail' slug=post.slug %}">{{ post.title }}</a>
+                <span>({{ post.date|date:"Y-m-d" }})</span>
+            </li>
+        {% empty %}
+            <p>No posts yet.</p>
+        {% endfor %}
+    </ul>
+    {% endblock content %}
+</body>

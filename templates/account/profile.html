@@ -1,0 +1,18 @@
+{% extends "_base.html" %}
+<body>
+    {% block content %}
+    <div class="container py-5">
+        <h1 class="text-center">User Profile</h1>
+        <div class="card mx-auto" style="max-width: 500px;">
+            <div class="card-body">
+                <h5 class="card-title">{{ user.username }}</h5>
+                <p class="card-text">Email: {{ user.email }}</p>
+                <p class="card-text">Joined: {{ user.date_joined }}</p>
+                <p class="card-text">Bio: {{ profile.bio }}</p>
+                <a href="{% url 'profile_edit' %}" class="btn btn-primary">Edit Profile</a>
+                <a href="/profile-delete" class="btn btn-danger">Delete Profile</a>
+            </div>
+        </div>
+    </div>
+    {% endblock content %}
+</body>

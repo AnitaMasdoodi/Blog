@@ -1,0 +1,59 @@
+{% extends "_base.html" %}
+{% load static %}
+
+{% block content %}
+<section class="tada-container content-posts">
+
+    <div class="category-header">
+        <h2>Posts in Category: {{ category.title }}</h2>
+    </div>
+
+    <div class="content col-xs-8">
+        {% if posts %}
+            {% for post in posts %}
+                <article>
+                    <div class="post-image">
+                        <img src="{{ post.image.url }}" alt="{{ post.title }}">
+                        <div class="category">
+                            <a href="{% url 'category_posts' category.slug %}">{{ category.title }}</a>
+                        </div>
+                    </div>
+                    <div class="post-text">
+                        <span class="date">{{ post.date }}</span>
+                        <h2><a href="{% url 'post_detail' slug=post.slug %}">{{ post.title }}</a></h2>
+                        <p class="text">
+                            {{ post.text|truncatechars:30 }}
+                            <a href="{% url 'post_detail' slug=post.slug %}">
+                                <i class="icon-arrow-right2"></i>
+                            </a>
+                        </p>
+                    </div>
+                    <div class="post-info">
+                        <div class="post-by">Post by <a href="#">{{ post.author }}</a></div>
+                        <div class="extra-info">
+                            <span class="comments">Comments: {{ post.approved_comments_count }}</span>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                </article>
+            {% endfor %}
+        {% else %}
+            <p>No posts found in this category.</p>
+        {% endif %}
+
+        <div class="pagination">
+            {% if posts.has_previous %}
+                <a href="?page={{ posts.previous_page_number }}" class="prev">Previous</a>
+            {% endif %}
+
+            <span>Page {{ posts.number }} of {{ posts.paginator.num_pages }}</span>
+
+            {% if posts.has_next %}
+                <a href="?page={{ posts.next_page_number }}" class="next">Next</a>
+            {% endif %}
+        </div>
+
+    </div>
+
+</section>
+{% endblock %}

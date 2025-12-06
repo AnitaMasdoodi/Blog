@@ -1,0 +1,11 @@
+<body>
+    
+    <div class="container py-5">
+        <h1 class="text-center">Register</h1>
+        <form action='' method='post'>
+            {% csrf_token %}
+            {{ form.as_p }}
+            <input type='submit' value='create'>
+        </form>
+    </div>
+</body>
