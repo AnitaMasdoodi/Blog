@@ -92,7 +92,8 @@ python manage.py runserver
 ![Home Page2](screenshots/home2.png)
 
 ### Post Page
-![Post Page](screenshots/post_detail.png)
+![Post Page1](screenshots/post_detail1.png)
+![Post Page2](screenshots/post_detail2.png)
 
 ---
 
