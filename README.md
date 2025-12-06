@@ -1,41 +1,33 @@
-# Django Blog Project
+# 📝 Django Blog
 
-A simple and functional blog application built with **Django**, featuring posts, categories, comments, user profiles, like system, search functionality, and pagination.  
-The project uses **Django Allauth** for user authentication and supports a clean, modular structure without any APIs.
+A **full-featured blog application** built with **Django** and **Django Allauth**.  
+This project includes **posts, categories, comments, likes, search, pagination**, and **user profiles**, all server-rendered using Django templates.
 
 ---
 
 ## 🚀 Features
 
-- **Post Management**
-  - Create, edit, delete posts
-  - Slug-based URLs
-  - Featured image support (if added)
+| Feature | Explanation |
+|---------|-------------|
+| **🔐 Authentication** | Sign up, login, logout, and profile management using Django Allauth |
+| **📝 Posts CRUD** | Create, edit, delete, and view posts |
+| **🗂 Categories** | Organize posts into categories |
+| **💬 Comments** | Users can comment on posts |
+| **❤️ Likes** | Users can like posts |
+| **🔍 Search** | Search posts by title or content |
+| **📄 Pagination** | Posts are paginated for easy browsing |
+| **👤 Profiles** | User profile page with user's posts |
 
-- **Categories**
-  - Each post belongs to a category
-  - Category-based filtering
+---
 
-- **Comments**
-  - Users can comment on posts
-  - Admin moderation support
+## 🧠 Tech Stack
 
-- **User Profiles**
-  - Extended user profile model
-  - Avatar / bio fields (if added)
-
-- **Like System**
-  - Users can like/unlike posts
-
-- **Search**
-  - Full-text search on posts
-
-- **Pagination**
-  - Paginated blog listing pages
-
-- **Authentication**
-  - Django Allauth login / logout / register
-  - Email-based authentication (optional)
+| Component | Technology |
+|-----------|------------|
+| **Backend** | Django, Django Allauth |
+| **Database** | SQLite / PostgreSQL |
+| **Frontend** | Django Templates (HTML, CSS, Bootstrap optional) |
+| **Pagination & Search** | Django built-in tools |
 
 ---
 
@@ -82,3 +74,18 @@ python manage.py runserver
 
 ---
 
+## 📌 Demo Flow
+
+1. Users can **sign up** or **login**.  
+2. Create a **post** and assign a **category**.  
+3. Users can **like** and **comment** on posts.  
+4. **Search** posts by keywords.  
+5. Posts are displayed with **pagination**.  
+6. Each user has a **profile page** with all their posts.
+
+---
+
+## 👤 Author
+
+**Anita Masdoodi**  
+Full-Stack Developer — Django / Python
