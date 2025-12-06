@@ -16,7 +16,7 @@ This project includes **posts, categories, comments, likes, search, pagination**
 | **❤️ Likes** | Users can like posts |
 | **🔍 Search** | Search posts by title or content |
 | **📄 Pagination** | Posts are paginated for easy browsing |
-| **👤 Profiles** | User profile page with user's posts |
+| **👤 Profiles** | User profile page to edit the profile |
 
 ---
 
@@ -25,7 +25,7 @@ This project includes **posts, categories, comments, likes, search, pagination**
 | Component | Technology |
 |-----------|------------|
 | **Backend** | Django, Django Allauth |
-| **Database** | SQLite / PostgreSQL |
+| **Database** | SQLite |
 | **Frontend** | Django Templates (HTML, CSS, Bootstrap optional) |
 | **Pagination & Search** | Django built-in tools |
 
@@ -81,7 +81,17 @@ python manage.py runserver
 3. Users can **like** and **comment** on posts.  
 4. **Search** posts by keywords.  
 5. Posts are displayed with **pagination**.  
-6. Each user has a **profile page** with all their posts.
+6. Each user has a **profile page** to edit their profile.
+
+---
+
+## 🖼️ Screenshots
+
+### Home Page
+![Home Page](screenshots/home.png)
+
+### Post Page
+![Post Page](screenshots/post_detail.png)
 
 ---
 
