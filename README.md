@@ -88,7 +88,8 @@ python manage.py runserver
 ## 🖼️ Screenshots
 
 ### Home Page
-![Home Page](screenshots/home.png)
+![Home Page1](screenshots/home1.png)
+![Home Page2](screenshots/home2.png)
 
 ### Post Page
 ![Post Page](screenshots/post_detail.png)
